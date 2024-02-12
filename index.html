@@ -8,17 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="normalize.css">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
 
     <header class="header">
         <nav class="header-container animation-entry-1s">
             <img class="animation-entry-2s" src="Imagenes/Logo.png" alt="">
-            <a href="#menu" class="header-menu animation-entry-2s">
-                <div></div>
-                <div></div>
-                <div></div>
+            <a href="#menu" class="header-menu" onclick="toggleMenu()">
+                <img src="Imagenes/menu.png" alt="">
             </a>
             <div class="header-li" id="menu">
                 <a href="#inicio" class="header-li-a">Inicio</a>
@@ -92,14 +89,14 @@
             <div class="third-section__carta-cont">
                 <div class="third-section__carta animation">
                     <img src="Imagenes/nach.jpeg" alt="">
-                    <h2>NACH<br><span class="artista">"El Artista"</span></h2>
+                    <h2 class="amarillo">NACH</h2>
                     <p>Domina todos los estilos de degrade, especialista en el corte a tijera y diseños.</p>
                 </div>
             </div>
             <div class="third-section__carta-cont">
                 <div class="third-section__carta carta2 animation">
                     <img src="Imagenes/panda.jpeg" alt="">
-                    <h2>PANDA<br><span class="vikingo">"El Vikingo"</span></h2>
+                    <h2 class="amarillo">PANDA</h2>
                     <p>Domina todos los estilos de degrade, especialista en Barba y corte a tijera en cabello largo.</p>
                 </div>
             </div>
@@ -188,5 +185,6 @@
         </nav>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+
 
 body, html {
     font-family: 'Abril Fatface', serif;
@@ -19,31 +19,11 @@ body, html {
     scroll-behavior: smooth;
 }
 
-/*ANIMACIONES*/
-
-/* .animation{
-    transition: transform 1s ease;
-}
-
-.animation:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-}
-
-.text-animation {
-    transition: transform 1s ease;
-}
-
-.text-animation:hover {
-    cursor: pointer;
-    font-size: 2em;
-} */
 
 h1, h2, p, b {
     margin: 0;
 }
 
-/*ANIMACIONES*/
 
 .header-li-dekstop {
     display: none;
@@ -60,77 +40,55 @@ h1, h2, p, b {
     justify-content: space-between;
     align-items: center;
 
-    width: 101vw;
-    height: 85px;
+    top: -1px;
+    right: -6px;
+    width: 102vw;
+    height: 87px;
     background-color: #2D2424;
     color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 
-    z-index: 1;
-}
-
-.header-logo {
-    display: flex;
-
-}
-
-.header-logo img {
-    width: 60px;
-    padding: 4px;
-    margin: 10px 10px 10px 20px;
-    background-color: #ffffff4f;
-    border-radius: 15px;
-    border: 2px solid #ffffff4f;
-    box-shadow: 0px 0px 5px #ffffff;
-}
-
-.header-menu {
-    position: relative;
-    top: 1.5vh;
-    right: 5vw;
-    display: flex;
-    flex-direction: column;
-    width: 2.2rem;
-    height: 3rem;
-    border: 0;
-    background: transparent;
-    gap: .50rem;
+    z-index: 20;
 }
 
 .header-container img {
-    width: 100px;
+    width: 70px;
     margin-left: 4vw;
 }
 
-.header-menu > div {
-    background-color: #ffffff;
-    height: 4px;
-    width: 100%;
-    border-radius: 5px;
-    transition: all .5s;
-    transform-origin: left;
+.header-menu {
+    display: flex;
+    flex-direction: column;
+    
+    margin-right: 20px;
+    width: 25px;
+    height: 22px;
+    padding: 10px 10px 10px;
+
+    background-color: #b4a5a550;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.904) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(122, 51, 113, 0.35) 0px -2px 6px 0px inset;
 }
 
-.header-menu:hover div:first-child {
-    transform: rotate(45deg);
+.header-menu:hover {
+    border: 2px solid #a8a8a8;
 }
 
-
-.header-menu:hover div:nth-child(2) {
-    transition: .25s;
-    opacity: 0;
+.header-menu img {
+    position: absolute;
+    right: 17px;
+    top: 19px;
+    width: 50px;
+    pointer-events: none;
 }
-
-.header-menu:hover div:last-child {
-    transform: rotate(-45deg);
-}
-
 
 .header-li {
     position: fixed;
     left: 0;
-    top: 80px;
-    right: 0;
+    top: 83px;
+    right: -1px;
+    left: -1px;
+    padding-right: 5px;
     
     display: flex;
     flex-direction: column;
@@ -139,33 +97,41 @@ h1, h2, p, b {
     height: 94vh;
     
     background: linear-gradient(0deg, #5d4b4b 0%, #2D2424 100%);
-    border-bottom: solid 2px #262626;
-
-    z-index: 1;
-    
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: clip-path 0.4s;
-}
-
-.header-li.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.header-li:target {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    z-index: 5;
 }
 
 .header-li-a {
+    font-family: 'DM Serif Display', serif;
     text-decoration: none;
     text-shadow: 1.5px 1.5px 0px #000;
     color: #fff;
 
     letter-spacing: 1.5px;
     font-size: 26px;
-    font: bold;
 }
 
+.header-li {
+    display: none;
+}
 
+.open {
+    display: flex !important;
+    z-index: 5;
+
+    animation: entryLeft 0.3s ease 0s 1 normal forwards;
+}
+
+@keyframes entryLeft {
+	0% {
+		transform: scaleY(0);
+		transform-origin: 100% 0%;
+	}
+
+	100% {
+		transform: scaleY(1);
+		transform-origin: 100% 0%;
+	}
+}
 
 
 
@@ -681,13 +647,9 @@ footer {
         display: flex;
     }
 
-    .header-li-dekstop div {
-        border-right: 2px solid #e3e3e3;
-    }
-
     .header-li-a {
         font-size: 20px;
-        margin: 0 10px;
+        margin: 0 20px;
     }
 
     .last-child-header {
