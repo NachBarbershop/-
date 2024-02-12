@@ -61,24 +61,23 @@ h1, h2, p, b {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    margin-right: 20px;
-    width: 25px;
-    height: 22px;
-    padding: 10px 10px 10px;
+    position: absolute;
+    top: 35px;
+    right: 45px;
 
-    background-color: #b4a5a550;
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.904) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(122, 51, 113, 0.35) 0px -2px 6px 0px inset;
-}
-
-.header-menu:hover {
-    box-shadow: 0px 0px 5px #fff;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
 }
 
 .header-menu img {
-    width: 50px;
-    margin-right: 28px;
+    margin-right: 20px;
+    background-color: #b4a5a550;
+    box-shadow: rgba(0, 0, 0, 0.904) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(122, 51, 113, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 6px;
+
+    width: 45px;
+    height: 45px;
     pointer-events: none;
 }
 
@@ -408,7 +407,7 @@ h1, h2, p, b {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000d8;
+    background-color: #00000077;
     
     width: 90vw;
     max-width: 400px;
@@ -418,7 +417,7 @@ h1, h2, p, b {
     color: #fff;
     text-decoration: none;
     font-size: 24px;
-    text-shadow: 1px 1px 0px #000000;
+    text-shadow: 2px 2px 3px #000000;
     box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
     border: 2px solid #00000068;
     border-radius: 16px;
