@@ -71,12 +71,12 @@ h1, h2, p, b {
 }
 
 .header-menu:hover {
-    border: 2px solid #a8a8a8;
+    border: 1px solid #a8a8a8;
 }
 
 .header-menu img {
     position: absolute;
-    right: 17px;
+    right: 18px;
     top: 19px;
     width: 50px;
     pointer-events: none;
